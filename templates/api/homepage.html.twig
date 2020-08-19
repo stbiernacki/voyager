@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <script>
+        window.user = {{ user|raw }};
+    </script>
+
+    <div id="v-film-web">
+        <film-web-app
+                entrypoint="{{ path('api_entrypoint') }}"
+        ></film-web-app>
+    </div>
+{% endblock %}
